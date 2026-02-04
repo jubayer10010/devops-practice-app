@@ -1,14 +1,18 @@
 const express = require('express');
-const app = express();
 const cors = require('cors');
+const app = express();
 
+// 1. Simplest possible configuration
 app.use(cors());
-app.use(express.json());
 
+// 2. Direct route - no variables, just hardcoded data
 app.get('/api/tasks', (req, res) => {
-    res.json([{ id: 1, task: "Learn Git Branching" }, { id: 2, task: "Setup CI/CD" }]);
+    console.log('Received a request at /api/tasks');
+    res.send([{ id: 1, task: "Connection Success!" }]);
 });
 
-app.listen(5000, () => {
-    console.log("Server started on port 5000");
+// 3. Simple listener
+app.listen(5000, '0.0.0.0', () => {
+    console.log('Backend is physically listening on port 5000');
 });
+
