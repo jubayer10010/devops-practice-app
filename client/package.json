@@ -1,16 +1,13 @@
 {
-  "name": "client",
+  "name": "devops-client",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Frontend for DevOps Practice App",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "serve -s ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "serve": "^14.2.1"
   }
 }
